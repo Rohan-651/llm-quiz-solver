@@ -23,7 +23,7 @@ client = OpenAI(
     base_url=base_url
 )
 
-model = "gpt-4o"
+model = "gpt-5-nano"
 
 def test_defense_prompt(system_prompt):
     """Test if your system prompt prevents code word leakage"""
