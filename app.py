@@ -33,7 +33,11 @@ with gr.Blocks() as demo:
     run_btn = gr.Button("Start solver (this runs background task)")
     output = gr.Textbox(label="Status")
 
-    run_btn.click(fn=run_solver, inputs=[email_input, secret_input, url_input], outputs=[output])
+    run_btn.click(
+    fn=run_solver,
+    inputs=[email_input, secret_input, url_input],
+    outputs=[output],
+    api_name="solve")
 
 if __name__ == "__main__":
     demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
